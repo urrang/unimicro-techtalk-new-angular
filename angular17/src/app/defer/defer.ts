@@ -11,9 +11,9 @@ import { Component3 } from './component3';
     imports: [Component1, Component2, Component3],
     template: `
         <h1>Deferred loading</h1>
-        <p>Defer loading of a component until they are needed.</p>
+        <p>Defer loading of components until they are needed.</p>
 
-        <h2>Load as soon as the view finish rendering</h2>
+        <h2>Load when the view finish rendering</h2>
 
         @defer (on immediate) {
             <component-one />
@@ -27,11 +27,11 @@ import { Component3 } from './component3';
             <button>Load component</button>
         }
 
-        <div #myelement style="margin: 150vh 0 2rem;">
-            Component will load when this element enters the viewport
-        </div>
+        <h2 #header style="margin: 150vh 0 2rem;">
+            Load when element enters the viewport
+        </h2>
 
-        @defer (on viewport(myelement)) {
+        @defer (on viewport(header)) {
             <component-three />
         }
     `,

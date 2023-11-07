@@ -11,12 +11,9 @@ import { RouterLink, RouterOutlet } from '@angular/router';
             <a routerLink="/input-transforms">Input transforms</a>
             <a routerLink="/control-flow">Control flow syntax</a>
             <a routerLink="/defer">Deferred loading</a>
-            <a routerLink="/performance">Performance</a>
         </nav>
 
         <router-outlet></router-outlet>
     `,
 })
-export class AppComponent {
-    title = 'angular17';
-}
+export class AppComponent {}
