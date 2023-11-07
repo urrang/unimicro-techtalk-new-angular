@@ -18,12 +18,3 @@
     <ng-template #emptyState>The list is empty, try adding some items</ng-template>
 </ng-container>
 
-@if (listVisible) {
-    <h2>Items</h2>
-
-    @for (item of list; track item.id) {
-        <div class="card">{{ item.name }}</div>
-    } @empty {
-        The list is empty, try adding some items
-    }
-}
