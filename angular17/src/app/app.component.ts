@@ -8,6 +8,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
     imports: [CommonModule, RouterOutlet, RouterLink],
     template: `
         <nav>
+            <a routerLink="/input-transforms">Input transforms</a>
             <a routerLink="/defer">Deferred loading</a>
             <a routerLink="/performance">Performance</a>
         </nav>
