@@ -1,17 +1,22 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [CommonModule, RouterOutlet, RouterLink],
+    imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive],
     template: `
         <nav>
-            <a routerLink="/input-transforms">Input transforms</a>
-            <a routerLink="/control-flow">Control flow syntax</a>
-            <a routerLink="/defer">Deferred loading</a>
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+                Home
+            </a>
+            <a routerLink="/input-transforms" routerLinkActive="active">Input transforms</a>
+            <a routerLink="/control-flow" routerLinkActive="active">Control flow syntax</a>
+            <a routerLink="/defer" routerLinkActive="active">Deferred loading</a>
         </nav>
+
+        <br />
 
         <router-outlet></router-outlet>
     `,
