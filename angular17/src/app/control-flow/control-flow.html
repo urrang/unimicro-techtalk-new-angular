@@ -1,0 +1,29 @@
+<h1>Control flow syntax</h1>
+
+<div class="buttons">
+    <button (click)="listVisible = !listVisible">Toggle list</button>
+    <button (click)="addItems()">Add items</button>
+    <button (click)="removeItems()">Remove items</button>
+</div>
+
+<ng-container *ngIf="listVisible">
+    <h2>Items</h2>
+
+    <ng-container *ngIf="list.length; else emptyState">
+        <div class="card" *ngFor="let item of list; trackBy: trackByFn">
+            {{ item.name }}
+        </div>
+    </ng-container>
+
+    <ng-template #emptyState>The list is empty, try adding some items</ng-template>
+</ng-container>
+
+@if (listVisible) {
+    <h2>Items</h2>
+
+    @for (item of list; track item.id) {
+        <div class="card">{{ item.name }}</div>
+    } @empty {
+        The list is empty, try adding some items
+    }
+}
