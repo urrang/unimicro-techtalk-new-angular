@@ -1,14 +1,20 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    standalone: true,
+    imports: [CommonModule, RouterOutlet, RouterLink],
+    template: `
+        <nav>
+            <a routerLink="/defer">Deferred loading</a>
+            <a routerLink="/performance">Performance</a>
+        </nav>
+
+        <router-outlet></router-outlet>
+    `,
 })
 export class AppComponent {
-  title = 'angular17';
+    title = 'angular17';
 }

@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Inter', sans-serif;
+    color: #092329;
+    padding: 1rem 2rem;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #265df6;
+}
+
+component-one,
+component-two,
+component-three {
+    display: block;
+    width: 20rem;
+    padding: 1rem;
+    background: #f1ece5;
+    border-radius: 6px;
+}
