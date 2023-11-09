@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { DeferDemo } from './defer/defer';
-import { InputTransformsDemo } from './input-transforms/input-transforms';
 import { ControlFlowDemo } from './control-flow/control-flow';
 import { MiscDemo } from './misc/misc';
 
@@ -13,8 +12,7 @@ export const routes: Routes = [
     {
         title: 'Input transforms',
         path: 'input-transforms',
-        loadComponent: () =>
-            import('./input-transforms/input-transforms').then((m) => m.InputTransformsDemo),
+        loadComponent: () => import('./input-transforms/input-transforms'),
     },
     {
         title: 'Control flow',

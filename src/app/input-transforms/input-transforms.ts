@@ -15,4 +15,4 @@ import { ChildComponent } from "./child-component";
         />
     `
 })
-export class InputTransformsDemo {}
+export default class InputTransformsDemo {}
