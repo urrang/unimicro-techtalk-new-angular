@@ -10,8 +10,8 @@ import { ChildComponent } from "./child-component";
 
         <child-component
             name="Anders"
-            [number]="2"
-            [blue]="true"
+            number="2"
+            blue
         />
     `
 })
